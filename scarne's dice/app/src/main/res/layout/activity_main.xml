@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.scarnesdice.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Score: 0 \n Computer Score = 0 \nTurn Score =0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/Score"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/RollB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="194dp"
+        android:layout_marginStart="36dp"
+        android:text="Roll"
+        android:onClick="Roll"
+        />
+
+    <Button
+        android:id="@+id/HoldB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold"
+        android:layout_alignBaseline="@+id/RollB"
+        android:layout_alignBottom="@+id/RollB"
+        android:layout_centerHorizontal="true"
+        android:onClick="Hold"
+        />
+
+    <Button
+        android:id="@+id/ResetB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_alignBaseline="@+id/HoldB"
+        android:layout_alignBottom="@+id/HoldB"
+        android:layout_toEndOf="@+id/DiceFace"
+        android:onClick="Reset"
+        />
+
+    <ImageView
+        android:id="@+id/DiceFace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="91dp"
+        app:srcCompat="@drawable/dice1" />
+
+
+</RelativeLayout>
